@@ -1,0 +1,14 @@
+flask
+flask-sqlalchemy
+werkzeug
+numpy
+pillow
+opencv-python
+tensorflow
+pymysql
+scikit-learn
+joblib
+
+python-dotenv      
+flask-session       
+flask-limiter      
