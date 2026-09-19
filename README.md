@@ -37,8 +37,8 @@ The system follows a sequential workflow from doctor authentication to OCT valid
         │             │
         ▼             ▼
 ┌───────────────┐     │
-│ Reject Message │     │
-│  (re-upload)   │     │
+│ Reject Message│     │
+│  (re-upload)  │     │
 └───────────────┘     ▼
               ┌─────────────────────────────┐
               │        Preprocessing        │  ← Image resized to 224×224×3
