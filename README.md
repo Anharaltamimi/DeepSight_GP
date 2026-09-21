@@ -74,8 +74,7 @@ The system follows a sequential workflow from doctor authentication to OCT valid
 
 DeepSight relies on two main AI components in its diagnostic pipeline:
 
-* **OCT validity checker (EfficientNet-B2 + One-Class SVM):** The uploaded image is divided into **224×224 patches**, and deep features are extracted from each patch using a pretrained **EfficientNet-B2** model used as a fixed feature extractor. A **One-Class SVM** is trained on OCT patch features to learn the characteristics of OCT images. Non-OCT samples are used to calibrate the decision threshold using ROC analysis. During inference, the system evaluates the image patches and accepts the image as an OCT scan when at least one patch meets the calibrated threshold. Otherwise, the image is rejected and the user is asked to upload another image.
-
+* **OCT validity checker (EfficientNet-B2 + One-Class SVM):** Before classification, the system checks that the uploaded image is a valid OCT scan. Features are extracted from **224×224 patches** using a pretrained **EfficientNet-B2** and scored by a **One-Class SVM**. Invalid images are rejected and the user is asked to upload another one.
 * **DM classification model (DenseNet121):** Validated OCT images are preprocessed and classified using a fine-tuned **DenseNet121** model into **Diabetic Maculopathy (DM)** or **Normal**. A **Grad-CAM** heatmap is generated alongside each prediction and included in the diagnostic report to visually highlight the regions that influenced the model's prediction.
 
 ## Model Development & Comparison
