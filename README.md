@@ -2,7 +2,6 @@
 
 DeepSight is a full-stack, AI-powered web application that leverages deep learning to automate the screening of **Diabetic Maculopathy (DM)** from **Optical Coherence Tomography (OCT)** images. The system uses a fine-tuned **DenseNet121** model to analyze retinal scans and classify them as either **Diabetic Maculopathy (DM)** or **Normal**, achieving **96% accuracy**. It provides an AI-assisted tool to support healthcare professionals in analyzing retinal images and making informed diagnostic decisions.
 
-Developed as a Graduation Project at the **College of Computer & Information Sciences, Princess Nourah bint Abdulrahman University (PNU)**, Riyadh, KSA.
 
 ## System Architecture
 
